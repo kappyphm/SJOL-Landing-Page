@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${robotoMono.variable} ${robotoSlab.variable}`}>
-      <body>{children}</body>
+      <body className="animate-fade-in">{children}</body>
     </html>
   );
 }
