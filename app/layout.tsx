@@ -1,6 +1,6 @@
+import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import { Roboto_Mono, Roboto_Slab } from "next/font/google";
-import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Safe Journey Of Loppy",
@@ -17,6 +17,12 @@ const robotoSlab = Roboto_Slab({
   variable: "--font-roboto-slab",
 });
 
+const list = [
+  { name: "Home", href: "/" },
+  { name: "Features", href: "/features" },
+  { name: "About Us", href: "/aboutus" },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,7 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${robotoMono.variable} ${robotoSlab.variable}`}>
-      <body>{children}</body>
+      <body>
+        <NavBar list={list} />
+        {children}
+      </body>
     </html>
   );
 }

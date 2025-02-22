@@ -12,6 +12,13 @@ const config: Config = {
         sans: ["var(--font-roboto-mono)", "monospace"],
         slab: ["var(--font-roboto-slab)", "serif"],
       },
+      colors:{
+        black: "#213555",
+        dark:"#3E5879",
+        shade:"#D8C4B6",
+        light:"#F5F5F5"
+
+      }
     },
   },
   plugins: [],

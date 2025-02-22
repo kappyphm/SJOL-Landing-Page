@@ -1,12 +1,23 @@
+import { NavData } from "@/lib/type";
+import Link from "next/link";
 import React from "react";
 
-const NavBar = () => {
+interface NavItemProps {
+  data: NavData;
+}
+
+const NavItem = ({ data }: NavItemProps) => {
+  return <Link href={data.href}>{data.name}</Link>;
+};
+interface NavBarProps {
+  list: NavData[];
+}
+const NavBar = ({ list }: NavBarProps) => {
   return (
-    <div className="grid grid-cols-12 gap-3 text-center font-bold sans">
-      <div>Home</div>
-      <div>Feature</div>
-      <div>About Us</div>
-      <div>Donate</div>
+    <div>
+      {list.map((item, index) => (
+        <NavItem key={index} data={item} />
+      ))}
     </div>
   );
 };
