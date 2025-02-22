@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,26 +11,24 @@ export default function Home() {
         flex
         flex-col
         justify-center
+        gap-10
         text-center
       "
     >
-      <div>
+      <div className="">
         <Image
           src="/GR-Text.png"
           alt="Greeting"
           width={800}
           height={400}
-          layout="responsive"
+          max-width={800}
+          className="mx-auto"
         />
-        <div className="px-10 text-sm font-medium text-light">
-          Tham gia giao thông an toàn
-        </div>
       </div>
-      <div className="mt-10">
+      <div className="">
         <button
           className=" 
             font-black 
-            
             text-light 
             px-5 py-4 
             bg-black 
@@ -40,6 +39,10 @@ export default function Home() {
             active:scale-100
             transition
             relative
+
+            md:text-4xl
+            md:px-8
+            md:py-7
           "
         >
           <svg
@@ -48,7 +51,7 @@ export default function Home() {
             viewBox="0 0 24 24"
             stroke-width="3"
             stroke="currentColor"
-            className=" opacity-0 hover:opacity-100 transition-all bg-black size-6 absolute left-0 top-0 px-3 py-3 w-full h-full"
+            className="font-slab opacity-0 hover:opacity-100 transition-all bg-black size-6 absolute left-0 top-0 px-4 py-4 w-full h-full"
           >
             <path
               stroke-linecap="round"
@@ -59,6 +62,27 @@ export default function Home() {
           DOWNLOAD NOW
         </button>
       </div>
+      <Link
+        href="/features"
+        className=" hover:text-xl transition-all text-light font-bold underline"
+      >
+        Learn more about Features
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          stroke="currentColor"
+          className="size-6 mx-auto "
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+          />
+        </svg>
+      </Link>
+      <div className=""></div>
     </div>
   );
 }
