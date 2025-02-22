@@ -7,14 +7,19 @@ interface NavItemProps {
 }
 
 const NavItem = ({ data }: NavItemProps) => {
-  return <Link href={data.href}>{data.name}</Link>;
+  return (
+    <Link href={data.href} className="font-bold text-black ">
+      {data.name}
+    </Link>
+  );
 };
 interface NavBarProps {
+  className?: string;
   list: NavData[];
 }
-const NavBar = ({ list }: NavBarProps) => {
+const NavBar = ({ list, className }: NavBarProps) => {
   return (
-    <div>
+    <div className={`${className} flex justify-evenly py-5`}>
       {list.map((item, index) => (
         <NavItem key={index} data={item} />
       ))}

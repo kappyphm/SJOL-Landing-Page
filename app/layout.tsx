@@ -1,6 +1,7 @@
 import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import { Roboto_Mono, Roboto_Slab } from "next/font/google";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Safe Journey Of Loppy",
@@ -31,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${robotoMono.variable} ${robotoSlab.variable}`}>
       <body>
-        <NavBar list={list} />
+        <NavBar className="absolute w-screen" list={list} />
         {children}
       </body>
     </html>
