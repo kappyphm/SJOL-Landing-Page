@@ -3,13 +3,13 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const teamMembers = [
-  { name: "Alice", role: "Web Developer", avatar: "/BG1.gif" },
-  { name: "Bob", role: "Game Developer", avatar: "/BG1.gif" },
-  { name: "Charlie", role: "Game Developer", avatar: "/BG1.gif" },
-  { name: "David", role: "Designer", avatar: "/BG1.gif" },
-  { name: "Eve", role: "Designer", avatar: "/BG1.gif" },
-  { name: "Frank", role: "Content Creator", avatar: "/BG1.gif" },
-  { name: "Grace", role: "Content Creator", avatar: "/BG1.gif" },
+  { name: "KhanhPG", role: "Web Developer", avatar: "/memberAvt/KhanhPG.jpg" },
+  { name: "DonNT", role: "Game Developer", avatar: "/memberAvt/DonNT.jpeg" },
+  { name: "LongNS", role: "Game Developer", avatar: "/memberAvt/LongNS.jpg" },
+  { name: "SonH", role: "Designer", avatar: "/BG1.gif" },
+  { name: "LyNT", role: "Designer", avatar: "/memberAvt/LyNT.jpg" },
+  { name: "LamTD", role: "Content Creator", avatar: "/memberAvt/LamTD.jpg" },
+  { name: "PhongBT", role: "Content Creator", avatar: "/BG1.gif" },
 ];
 
 export default function LandingPage() {
@@ -29,7 +29,7 @@ export default function LandingPage() {
   return (
     <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center">
       {/* Hero Section */}
-      <header className="bg-[url('/BG1.gif')] bg-cover bg-center  w-full min-h-screen flex flex-col justify-center items-center text-center px-4">
+      <header className="bg-[url('/BG1.gif')] bg-cover bg-center bg-fixed  w-full min-h-screen flex flex-col justify-center items-center text-center px-4">
         <div className="">
           <Image
             src="/GR-Text.png"
@@ -72,16 +72,16 @@ export default function LandingPage() {
             </p>
           </div>
           <div className="p-6 bg-gray-800 rounded-lg">
-            <h3 className="text-xl font-medium">Multiplayer Mode</h3>
-            <p className="text-gray-400">Compete with friends in real time.</p>
+            <h3 className="text-xl font-medium">Play to learn</h3>
+            <p className="text-gray-400">Learning is fun!</p>
           </div>
         </div>
       </section>
 
       {/* Gallery Section */}
-      <section className="w-full  text-center py-16 px-4  bg-[url('/BG3.gif')] bg-cover bg-center">
+      <section className="w-full text-center py-16 px-4 bg-fixed bg-[url('/BG3.gif')] bg-cover bg-center">
         <h2 className="text-3xl font-semibold mb-8">Game Previews</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto ">
           <div className="col-span-2 row-span-2">
             <Image
               src="/BG1.gif"
@@ -148,7 +148,7 @@ export default function LandingPage() {
       </section>
 
       {/* Download Section */}
-      <section className="w-full bg-[url('/BG2.gif')] bg-cover bg-center text-center py-16 px-4">
+      <section className="w-full bg-[url('/BG2.gif')] bg-fixed bg-cover bg-top text-center py-16 px-4">
         <h2 className="text-3xl font-black md:text-5xl mb-6 text-light uppercase">
           Get the Game Now
         </h2>
