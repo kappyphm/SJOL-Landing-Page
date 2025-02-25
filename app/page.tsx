@@ -1,6 +1,5 @@
-"use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const teamMembers = [
   { name: "KhanhPG", role: "Web Developer", avatar: "/memberAvt/KhanhPG.jpg" },
@@ -12,20 +11,25 @@ const teamMembers = [
   { name: "PhongBT", role: "Content Creator", avatar: "/BG1.gif" },
 ];
 
+const testimonials = [
+  {
+    name: "John Doe",
+    review: "Amazing game! I had so much fun playing it.",
+    avatar: "/BG1.gif",
+  },
+  {
+    name: "Jane Smith",
+    review: "A fantastic experience, highly recommend!",
+    avatar: "/BG1.gif",
+  },
+  {
+    name: "Alex Johnson",
+    review: "Great graphics and gameplay. Looking forward to updates!",
+    avatar: "/BG1.gif",
+  },
+];
+
 export default function LandingPage() {
-  const [downloadCount, setDownloadCount] = useState(0);
-
-  useEffect(() => {
-    // Giả lập số lượt tải từ server
-    const fetchDownloadCount = async () => {
-      // Thay thế bằng API thực tế nếu có
-      const fakeCount = 1234;
-      setDownloadCount(fakeCount);
-    };
-
-    fetchDownloadCount();
-  }, []);
-
   return (
     <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center">
       {/* Hero Section */}
@@ -43,16 +47,12 @@ export default function LandingPage() {
         <p className=" md:text-lg text-light font-medium mb-6">
           Download now and start your journey!
         </p>
-        <button
-          onClick={() => setDownloadCount(downloadCount + 1)}
+        <Link
+          href="/download"
           className="bg-black px-7 uppercase text-light py-5 rounded-lg text-lg font-semibold hover:scale-110 active:scale-105 transition-all hover:bg-dark"
         >
           Download Now
-        </button>
-        <p className="mt-4 text-light font-semibold">
-          Downloads:{" "}
-          <span className="font-bold text-light">{downloadCount}</span>
-        </p>
+        </Link>
       </header>
 
       {/* Features Section */}
@@ -147,24 +147,38 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Download Section */}
-      <section className="w-full bg-[url('/BG2.gif')] bg-fixed bg-cover bg-top text-center py-16 px-4">
-        <h2 className="text-3xl font-black md:text-5xl mb-6 text-light uppercase">
-          Get the Game Now
+      <section className="w-full bg-[url('/BG2.gif')] bg-fixed bg-cover bg-top text-center py-10 px-4">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-10">
+          What Players Are Saying
         </h2>
-        <div className="flex flex-col md:flex-row gap-4 justify-center">
-          <button className="bg-dark text-light hover:bg-shade hover:text-black  px-6 py-3 rounded-lg text-lg font-semibold transition-all">
-            Download for Windows
-          </button>
-          <button className="bg-shade text-black hover:bg-dark hover:text-light px-6 py-3 rounded-lg text-lg font-semibold transition-all">
-            Download for Mac
-          </button>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center p-4 bg-gray-700 rounded-lg"
+            >
+              <div className="w-16 h-16 overflow-hidden rounded-full mb-2 flex items-center justify-center bg-gray-700">
+                <Image
+                  src={testimonial.avatar}
+                  alt={testimonial.name}
+                  width={100}
+                  height={100}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <p className="text-gray-300 italic">
+                {" "}
+                &quot;{testimonial.review}&quot;{" "}
+              </p>
+              <h3 className="text-lg font-medium mt-2">- {testimonial.name}</h3>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Footer */}
       <footer className="w-full text-center py-6 bg-gray-800 text-gray-400 px-4">
-        <p>&copy; 2025 The7Bugs Team. All rights reserved.</p>
+        <p>&copy; 2025 The7Bugs Team..</p>
       </footer>
     </div>
   );
