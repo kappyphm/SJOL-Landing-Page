@@ -10,7 +10,7 @@ const GallerySec = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto ">
           <div className="col-span-2 row-span-2">
             <Image
-              src="/BG1.gif"
+              src="/scrshot/scr1.jpg"
               alt="Gallery Image 1"
               width={600}
               height={400}
@@ -19,7 +19,7 @@ const GallerySec = () => {
           </div>
           <div>
             <Image
-              src="/BG2.gif"
+              src="/scrshot/scr4.jpg"
               alt="Gallery Image 2"
               width={300}
               height={200}
@@ -28,7 +28,7 @@ const GallerySec = () => {
           </div>
           <div>
             <Image
-              src="/BG3.gif"
+              src="/scrshot/scr3.jpg"
               alt="Gallery Image 3"
               width={300}
               height={200}
@@ -37,7 +37,7 @@ const GallerySec = () => {
           </div>
           <div className="col-span-2">
             <Image
-              src="/BG1.gif"
+              src="/scrshot/scr8.jpg"
               alt="Gallery Image 4"
               width={600}
               height={200}

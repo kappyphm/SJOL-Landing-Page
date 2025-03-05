@@ -52,7 +52,7 @@ export default function DownloadDonatePage() {
           Donate Now
         </button>
       </section>
-      <div className="mt-4">
+      <div className="my-4">
         <Link
           href="/"
           className="text-sm font-semibold underline hover:text-blue-500 transition-all"
@@ -60,6 +60,8 @@ export default function DownloadDonatePage() {
           Back to Home
         </Link>
       </div>
+
+      <div></div>
 
       {/* Footer */}
     </div>

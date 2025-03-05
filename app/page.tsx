@@ -5,7 +5,7 @@ import HeroSec from "@/components/sections/HeroSec";
 
 export default function LandingPage() {
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center">
+    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center pb-12">
       <HeroSec />
       <FeaturesSec />
       <GallerySec />

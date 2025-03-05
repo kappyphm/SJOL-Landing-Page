@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en" className={`${robotoMono.variable} ${robotoSlab.variable}`}>
       <body className="animate-fade-in">
         {children}
-        <footer className="w-full text-center py-5 bg-gray-800 text-gray-400 mt-12">
+        <footer className="w-full text-center py-5 bg-gray-800 text-gray-400">
           <p>&copy; 2025 The7Bugs</p>
         </footer>
       </body>
