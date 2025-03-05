@@ -62,9 +62,6 @@ export default function DownloadDonatePage() {
       </div>
 
       {/* Footer */}
-      <footer className="w-full text-center py-5 bg-gray-800 text-gray-400 mt-12">
-        <p>&copy; 2025 The7Bugs</p>
-      </footer>
     </div>
   );
 }
