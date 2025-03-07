@@ -35,10 +35,10 @@ export default function DownloadDonatePage() {
         <button className="bg-blue-600 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700">
           Download Game
         </button>
-        <p className="mt-4 text-gray-300">
+        {/* <p className="mt-4 text-gray-300">
           Total Downloads:{" "}
           <span className="font-bold text-white">{downloadCount}</span>
-        </p>
+        </p> */}
       </section>
 
       {/* Donation Section */}
