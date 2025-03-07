@@ -10,7 +10,7 @@ export default function DownloadDonatePage() {
     // Giả lập số lượt tải từ server
     const fetchDownloadCount = async () => {
       // Thay thế bằng API thực tế nếu có
-      const fakeCount = 1234;
+      const fakeCount = 0;
       setDownloadCount(fakeCount);
     };
 
@@ -33,12 +33,12 @@ export default function DownloadDonatePage() {
       <section className="w-full max-w-4xl text-center bg-gray-800 p-8 rounded-lg shadow-lg">
         <h2 className="text-2xl font-semibold mb-4">Download Now</h2>
         <button className="bg-blue-600 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700">
-          Download Game
+          Download is comming...
         </button>
-        {/* <p className="mt-4 text-gray-300">
+        <p className="mt-4 text-gray-300">
           Total Downloads:{" "}
           <span className="font-bold text-white">{downloadCount}</span>
-        </p> */}
+        </p>
       </section>
 
       {/* Donation Section */}
