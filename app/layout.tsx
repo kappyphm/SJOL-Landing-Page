@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Safe Journey Of Loppy",
   description:
     "Một dự án SSG104 lớp cô HoaNM :)) mọi người tải game ủng hộ sốp nhaaaaaaa",
+  icons: "/GR-Text.png",
 };
 
 const robotoMono = Roboto_Mono({
@@ -28,7 +29,23 @@ export default function RootLayout({
       <body className="animate-fade-in">
         {children}
         <footer className="w-full text-center py-5 bg-gray-800 text-gray-400">
-          <p>&copy; 2025 The7Bugs</p>
+          <div className="container mx-auto px-4">
+            <p className="text-lg font-semibold">&copy; 2025 The7Bugs</p>
+            <p className="mt-2 text-sm">
+              Safe Journey of Loppy là một tựa game về tham gia giao thông an
+              toàn được phát triển bởi nhóm sinh viên đại học FPT Hà Nội.
+            </p>
+            <div className="mt-3">
+              <a
+                href="https://www.facebook.com/yourpage"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline"
+              >
+                Kết nối với chúng tôi trên Facebook
+              </a>
+            </div>
+          </div>
         </footer>
       </body>
     </html>

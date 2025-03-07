@@ -1,33 +1,20 @@
 "use client";
 import React, { useState } from "react";
 
-const testimonials = [
-  {
-    name: "John Doe",
-    review: "Amazing game! I had so much fun playing it.",
-    avatar: "/BG1.gif",
-  },
-  {
-    name: "Jane Smith",
-    review: "A fantastic experience, highly recommend!",
-    avatar: "/BG1.gif",
-  },
-  {
-    name: "Alex Johnson",
-    review: "Great graphics and gameplay. Looking forward to updates!",
-    avatar: "/BG1.gif",
-  },
-];
+interface Testimonials {
+  name: string;
+  review: string;
+}
 
 const TestimotionalSec = () => {
   const [newReview, setNewReview] = useState("");
   const [newName, setNewName] = useState("");
-  const [userTestimonials, setUserTestimonials] = useState(testimonials);
+  const [userTestimonials, setUserTestimonials] = useState<Testimonials[]>([]);
   const handleAddReview = () => {
     if (newReview.trim() && newName.trim()) {
       setUserTestimonials([
         ...userTestimonials,
-        { name: newName, review: newReview, avatar: "/BG1.gif" },
+        { name: newName, review: newReview },
       ]);
       setNewReview("");
       setNewName("");
@@ -59,27 +46,31 @@ const TestimotionalSec = () => {
               onClick={handleAddReview}
               className="bg-green-500 px-6 py-2 rounded-lg text-lg font-semibold hover:bg-green-600"
             >
-              Submit Review
+              Send Review
             </button>
           </div>
           <div className="border md:hidden border-light my-4"></div>
-          <div className="grid grid-cols-1 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="items-center p-4 bg-gray-700 rounded-lg"
-              >
-                <div className="text-left">
-                  <h3 className="text-lg font-medium ml-2">
-                    {testimonial.name}
-                  </h3>
-                  <p className="text-gray-300 italic">
-                    {" "}
-                    &quot;{testimonial.review}&quot;{" "}
-                  </p>
+          <div className="grid grid-cols-1 gap-6 max-h-[400px] overflow-y-scroll">
+            {userTestimonials.length == 0 ? (
+              <div>Your review will be here!</div>
+            ) : (
+              userTestimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="items-center p-4 bg-gray-700 rounded-lg"
+                >
+                  <div className="text-left">
+                    <h3 className="text-lg font-medium ml-2">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-gray-300 italic">
+                      {" "}
+                      &quot;{testimonial.review}&quot;{" "}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
         </div>
       </section>
