@@ -18,13 +18,13 @@ const HeroSec = () => {
           />
         </div>
         <p className=" md:text-lg text-light font-medium mb-6">
-          Download now and start your journey!
+          Let&apos;s start your journey!
         </p>
         <Link
-          href="/download"
+          href="https://kappyphm.itch.io/safe-journey-of-loppy"
           className="bg-black px-7 uppercase text-light py-5 rounded-lg text-lg font-semibold hover:scale-110 active:scale-105 transition-all hover:bg-dark"
         >
-          Download Now
+          Play Now
         </Link>
       </header>
     </>
